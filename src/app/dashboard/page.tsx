@@ -1,10 +1,7 @@
-import { redirect } from "next/navigation";
-import { auth } from "../utils/auth";
+import { requireUser } from "../utils/hooks";
 
 export default async function DashboardRoute() {
-  const session = await auth();
-
-  if(!session?.user) redirect("/")
+  await requireUser();
   return (
     <div>
       <h1>Hello from the Dashboard Route</h1>
