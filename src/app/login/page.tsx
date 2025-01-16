@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,6 +8,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { signIn } from "../utils/auth";
+import { SubmitButton } from "@/components/SubmitButton";
 
 export default function Login() {
   return (
@@ -38,7 +38,7 @@ export default function Login() {
                   placeholder="hello@example.com"
                 />
               </div>
-              <Button>Submit</Button>
+              <SubmitButton />
             </form>
           </CardContent>
         </Card>
